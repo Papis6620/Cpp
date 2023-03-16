@@ -3,9 +3,7 @@ using namespace std;
 
 int main(){
     int error = 0;
-    int licznik = 0;
     string str;
-
     cout << "Podaj tekst, żeby sprawdzić czy jest palindromem:" << endl;
     getline(cin,str); 
 
