@@ -17,7 +17,7 @@ int main(){
         }else if(bok_z <= bok_w){
             cout << "Rozmiar zewnętrzny musi być większy od rozmiaru wewnętrznego" << endl;
         }
-    }while(bok_z <= bok_w || (bok_z % 2) != (bok_w % 2));
+    }while(bok_z <= bok_w || bok_z < 1 ||(bok_z % 2) != (bok_w % 2));
 
 
     for(int i = 0; i < (bok_z - bok_w)/2; i++){
