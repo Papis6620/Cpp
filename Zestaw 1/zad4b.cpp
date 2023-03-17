@@ -3,8 +3,7 @@
 using namespace std;
 
 unsigned long long fib(int k){      //funkcja obliczająca wyraz ciągu Fibonnaciego iteracyjnie
-    if(k == 0) return 0;
-    if(k == 1) return 1;
+    if(k <= 1) return k;
     if(k > 1){
         unsigned long long fib1 = 0;
         unsigned long long fib2 = 1;
