@@ -19,16 +19,18 @@ int main(){
         }
     }while(bok_z <= bok_w || bok_z < 1 ||(bok_z % 2) != (bok_w % 2));
 
+    for(int i = 0; i < bok_z; i++){
 
-    for(int i = 0; i < (bok_z - bok_w)/2; i++){
-        cout << setfill('*') << setw(bok_z) << "" << endl;
+        if(i < ((bok_z - bok_w)/2) || i >= (((bok_z - bok_w)/2)+bok_w)){
+            cout << setfill('*') << setw(bok_z) << "" << endl;
+        }else{
+            cout << setfill('*') << setw((bok_z-bok_w)/2) << "" 
+            << setfill(' ') << setw(bok_w) << "" 
+            << setfill('*') << setw((bok_z-bok_w)/2) << "" << endl;
+        }
+
     }
-    for(int i = 0; i < bok_w;i++){
-        cout << setfill('*') << setw((bok_z-bok_w)/2) << "" << setfill(' ') << setw(bok_w) << "" << setfill('*') << setw((bok_z-bok_w)/2) << "" << endl;
-    }
-    for(int i = 0; i < (bok_z - bok_w)/2; i++){
-        cout << setfill('*') << setw(bok_z) << "" << endl;
-    }
+
 
 
     return 0;
