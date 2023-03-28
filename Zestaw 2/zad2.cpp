@@ -4,14 +4,16 @@ using namespace std;
 
 void quick_sort(vector<int> &numbers, int left, int right){
     if(left >= right) return;
-    int i = left - 1;
-    int j = right + 1;
+    int i = left;
+    int j = right;
     int pivot = numbers[(left+right) / 2];
     while(true){
-        while(pivot > numbers[++i]);
-        while(pivot < numbers[--j]);
+        while(pivot > numbers[i])i++;
+        while(pivot < numbers[j])j--;
         if(i <= j){
             swap(numbers[i],numbers[j]);
+            i++;
+            j--;
         }else break;
     }
     if(j > left){
@@ -26,12 +28,21 @@ int main(){
     vector<int> numbers;
     uniform_int_distribution<int> random(1, 10000);
     default_random_engine gen;
+    cout << "Nieposortowane liczby:" << endl;
     for(int i = 0; i < 10000; i++){
         numbers.push_back(random(gen));
+        cout << numbers[i] << " ";
+        if(i % 10 == 9){
+            cout << endl;
+        }
     }
     quick_sort(numbers, 0, 9999);
+    cout << endl << "posortowane liczby:" << endl;
     for(int i = 0; i < 10000; i++){
-        cout << numbers[i] << endl;
+        cout << numbers[i] << " ";
+        if(i % 10 == 9){
+            cout << endl;
+        }
     }
     return 0;
 }
