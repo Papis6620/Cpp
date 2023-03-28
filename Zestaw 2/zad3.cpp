@@ -12,7 +12,7 @@ auto fun(const auto& arg){
 }
 
 int main(){
-    auto arg = {1,7,12};
+    auto arg = {1,2,3};
     auto wynik = fun(arg);
     cout << "Suma = " << wynik << endl;
     return 0;
