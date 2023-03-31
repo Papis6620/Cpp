@@ -37,7 +37,7 @@ int main(){
         }
     }
     quick_sort(numbers, 0, 9999);
-    cout << endl << "posortowane liczby:" << endl;
+    cout << endl << "Posortowane liczby:" << endl;
     for(int i = 0; i < 10000; i++){
         cout << numbers[i] << " ";
         if(i % 10 == 9){

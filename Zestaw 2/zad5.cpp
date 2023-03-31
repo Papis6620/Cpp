@@ -27,6 +27,6 @@ int main(int argc, char *argv[]){
         exit(1);
     }
     
-    cout << arab_rzym(liczba) << endl;
+    cout << "Liczba rzymska: " << arab_rzym(liczba) << endl;
     return 0;
 }
