@@ -47,8 +47,8 @@ int main(){
     TComplex obiekt(2,3);
     TComplex obiekt2(4,1);
     double wartosc = obiekt.abs();
-    cout << "Sprzężenie zespolone liczby" << obiekt << " = " << obiekt.conj() << endl;
-    cout << "Wartosc liczby"<< obiekt << " = " << wartosc << endl;
+    cout << "Sprzężenie zespolone liczby " << obiekt << " = " << obiekt.conj() << endl;
+    cout << "Wartosc liczby "<< obiekt << " = " << wartosc << endl;
     cout << obiekt << " * " << obiekt2 << " = " << obiekt * obiekt2 << endl;
     cout << obiekt << " / " << obiekt2 << " = " << obiekt / obiekt2 << endl;
     return 0;
